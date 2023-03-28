@@ -3,27 +3,29 @@ vnexpress crawler.
 """
 import scrapy
 
+
 def get_urls(pages=30):
     """Get urls for vnexpress categories. Each category may span hundreds of pages.    
     """
     root_urls = [
-        "https://vnexpress.net/the-gioi/tu-lieu",
-        "https://vnexpress.net/the-gioi/phan-tich",
-        "https://vnexpress.net/kinh-doanh/quoc-te",
-        "https://vnexpress.net/kinh-doanh/doanh-nghiep",
-        "https://vnexpress.net/kinh-doanh/bat-dong-san",
-        "https://vnexpress.net/kinh-doanh/vi-mo",
-        "https://vnexpress.net/giai-tri/gioi-sao",
-        "https://vnexpress.net/giai-tri/phim",
-        "https://vnexpress.net/giai-tri/sach",
-        "https://vnexpress.net/bong-da",
-        "https://vnexpress.net/the-thao/tennis",
-        "https://vnexpress.net/the-thao/cac-mon-khac",
-        "https://vnexpress.net/doi-song/bai-hoc-song",
-        "https://vnexpress.net/du-lich/diem-den",
-        "https://vnexpress.net/du-lich/dau-chan",
-        "https://vnexpress.net/du-lich/tu-van",
-        "https://vnexpress.net/y-kien/doi-song"
+        "https://vnexpress.net/kinh-doanh/chung-khoan",
+        # "https://vnexpress.net/the-gioi/tu-lieu",
+        # "https://vnexpress.net/the-gioi/phan-tich",
+        # "https://vnexpress.net/kinh-doanh/quoc-te",
+        # "https://vnexpress.net/kinh-doanh/doanh-nghiep",
+        # "https://vnexpress.net/kinh-doanh/bat-dong-san",
+        # "https://vnexpress.net/kinh-doanh/vi-mo",
+        # "https://vnexpress.net/giai-tri/gioi-sao",
+        # "https://vnexpress.net/giai-tri/phim",
+        # "https://vnexpress.net/giai-tri/sach",
+        # "https://vnexpress.net/bong-da",
+        # "https://vnexpress.net/the-thao/tennis",
+        # "https://vnexpress.net/the-thao/cac-mon-khac",
+        # "https://vnexpress.net/doi-song/bai-hoc-song",
+        # "https://vnexpress.net/du-lich/diem-den",
+        # "https://vnexpress.net/du-lich/dau-chan",
+        # "https://vnexpress.net/du-lich/tu-van",
+        # "https://vnexpress.net/y-kien/doi-song"
     ]
 
     urls = []
@@ -56,4 +58,3 @@ class VnexpressSpider(scrapy.Spider):
                 'title': article.xpath('div/a/@title').get(),
                 'text': article.xpath('p/a/text()').get()
             }
-
