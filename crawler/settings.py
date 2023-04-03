@@ -16,7 +16,9 @@ NEWSPIDER_MODULE = 'crawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'crawler (+http://www.yourdomain.com)'
+# USER_AGENT = 'crawler (+http://www.yourdomain.com)'
+# Need to change USER_AGENT for sites such as vietstock
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
 USER_AGENT_LIST = [
     "Google",
     "Google",

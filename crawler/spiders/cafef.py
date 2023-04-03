@@ -12,7 +12,7 @@ def get_urls():
     return urls
 
 
-class CafefSpier(scrapy.Spider):
+class CafefSpider(scrapy.Spider):
     name = 'cafef'
     custom_settings = {
         'FEED_FORMAT': 'json',
